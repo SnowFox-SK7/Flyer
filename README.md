@@ -1,2 +1,2 @@
 # Flyer
-Arquives for a web-aplication for marketing and propaganda
+Web-aplication for marketing and propaganda of small business.
