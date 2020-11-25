@@ -66,12 +66,11 @@ label {
     align-items: center;
     width: 60%;
 }
-#search-input .search-option a,
-#search-input .input-option a,
-#profile-options a {
+#search-input .search-option,
+#search-input .input-option,
+#profile-options {
     position: relative;
     text-decoration: none;
-    color: white;
 }
 #search-input .search-option button:hover,
 #search-input .input-option  button:hover,
@@ -91,7 +90,6 @@ label {
     border: 0;
     border-radius: 25px;
     padding: 5px 10px;
-    position: relative;
     font-size: 28px;
     margin: 5px;
 }
@@ -141,7 +139,6 @@ label {
     border: 0;
     border-radius: 25px;
     padding: 5px 10px;
-    position: relative;
     font-size: 28px;
     margin: 10px;
 }
@@ -209,8 +206,10 @@ label {
 #filters-menu ul li a span.turn {
     transform: rotate(90deg);
 }
+#filters-menu ul li:hover,
 #filters-menu ul li a:hover {
     background-color: cornflowerblue;
+    color: black;
 }
 /* PARA EXPANDIR OS SUB-FILTROS */
 #filters-menu.expand {

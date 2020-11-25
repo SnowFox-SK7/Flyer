@@ -1,6 +1,6 @@
 /* NO CASO DE QQR MUDANÇA NO CÓDIGO, COMENTE O CÓDIGO ANTIGO */
 
-/* PARA OS BOTÕES DE OPÇÃO DE BUSCA MUDAREM AO CLICAR */{
+/* PARA OS BOTÕES DE OPÇÃO DE BUSCA MUDAREM AO CLICAR */
 $('.map-btn').click(function(){
     $('.map-btn').toggleClass('clicked');
 });
@@ -22,16 +22,16 @@ $('.notif-btn').click(function(){
 $('.settings-btn').click(function(){
     $('.settings-btn').toggleClass('clicked');
 });
-}
-/* EXPANDIR FILTROS */ {
+
+/* EXPANDIR FILTROS */ 
 $('.btn-show').click(function(){
     $('#filters-menu').toggleClass('expand');
 });
 $('.btn-close').click(function(){
     $('#filters-menu').toggleClass('expand');
 });
-}
-/* EXPANDIR SUB-FILTROS */ {
+
+/* EXPANDIR SUB-FILTROS */ 
 $('.filter-item1').click(function(){
     $('#filters-menu ul .sub-filter-item1').toggleClass('expand');
     $('#filters-menu ul li a .list1').toggleClass('turn');
@@ -60,7 +60,7 @@ $('.filter-item7').click(function(){
     $('#filters-menu ul .sub-filter-item7').toggleClass('expand');
     $('#filters-menu ul li a .list7').toggleClass('turn');
 });
-}
+
 /* PARA ESCONDER MENU SE CLICAR FORA DELE */
 const $filtersMenu = $('#filters-menu');
 $(document).mouseup(e => {
