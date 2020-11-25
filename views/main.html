@@ -1,0 +1,241 @@
+<!-- /* NO CASO DE QQR MUDANÇA NO CÓDIGO, COMENTE O CÓDIGO ANTIGO */ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> F/yr </title>
+    <!-- ESTILOS -->
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="/navigation.css">
+    <!-- GOOGLE ICONS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <!--J-QUERY -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main> <!-- NÃO ESTILIZAR POR HORA -->
+        <!-- BARRA SUPERIOR DEFAULT -->
+        <div id="default-upper-bar">
+            <div id="logo-container">
+                <div class="btn-show">
+                    <span class="material-icons">add</span>
+                    <label for="btn-show">Filtros</label>
+                </div>
+                    <img class="logo" src="/flyer-icon.png" alt="logo">
+            </div>
+            <nav id="filters-menu">
+                <div class="filters-title">
+                    <div class="btn-close">
+                        <span class="material-icons">arrow_back</span>
+                        <label for="btn-show">Voltar</label>
+                    </div>
+                    <img class="logo" src="/flyer-icon.png" alt="logo">
+                </div>
+                <ul> <!-- FILTROS DE PESQUISA -->
+                    <li><span class="material-icons">local_dining</span>
+                        <a href="#" class="filter-item1">Gastronomia<span class="material-icons list1">keyboard_arrow_right
+                    </span></a>
+                        <ul class="sub-filter-item1">
+                            <li><a href="#"><span class="material-icons">sports_bar</span>Bares</a></li>
+                            <li><a href="#"><span class="material-icons">restaurant</span>Restaurantes</a></li>
+                            <li><a href="#"><span class="material-icons">fastfood</span>Lanchonetes</a></li>
+                            <li><a href="#"><span class="material-icons">local_cafe</span>Cafés/Padarias</a></li>
+                            <li><a href="#"><span class="material-icons">cake</span>Confeitarias</a></li>
+                            <li><a href="#"><span class="material-icons">local_pizza</span>Bombonieres</a></li>
+                            <li><a href="#"><span class="material-icons">local_bar</span>Adegas</a></li>
+                        </ul>
+                    </li>
+                    <li><span class="material-icons">engineering</span>
+                        <a href="#" class="filter-item2">Serviços<span class="material-icons list2">keyboard_arrow_right</span></a>
+                        <ul class="sub-filter-item2">
+                            <li><a href="#"><span class="material-icons">build</span>Gerais</a></li>
+                            <li><a href="#"><span class="material-icons">electrical_services</span>Elétricos</a></li>
+                            <li><a href="#"><span class="material-icons">phonelink</span>Eletrônicos</a></li>
+                            <li><a href="#"><span class="material-icons">directions_car</span>Mecânicos</a></li>
+                            <li><a href="#"><span class="material-icons">carpenter</span>Marcenaria</a></li>
+                            <li><a href="#"><span class="material-icons">local_business</span>Serralheria</a></li>
+                        </ul>
+                    </li>
+                    <li><span class="material-icons">local_grocery_store</span>
+                        <a href="#" class="filter-item3">Mercados<span class="material-icons list3">keyboard_arrow_right</span></a>
+                        <ul class="sub-filter-item3">
+                            <li><a href="#"><span class="material-icons">gps_not_fixed</span>Locais</a></li>
+                            <li><a href="#"><span class="material-icons">business_center</span>Açougues</a></li>
+                            <li><a href="#"><span class="material-icons">local_florist</span>Hortifruti</a></li>
+                            <li><a href="#"><span class="material-icons">pets</span>Pet-Shop</a></li>
+                            <li><a href="#"><span class="material-icons">business</span>Atacado</a></li>
+                            <li><a href="#"><span class="material-icons">local_convenience_store</span>Conveniência</a></li>
+                        </ul>
+                    </li>
+                    <li><span class="material-icons">checkroom</span>
+                        <a href="#" class="filter-item4">Vestuário<span class="material-icons list4">keyboard_arrow_right</span></a>
+                        <ul class="sub-filter-item4">
+                            <li><a href="#"><span class="material-icons">shopping_bag</span>Casuais</a></li>
+                            <li><a href="#"><span class="material-icons">local_mall</span>Formais</a></li>
+                            <li><a href="#"><span class="material-icons">face</span>Infantil</a></li>
+                            <li><a href="#"><span class="material-icons">monetization_on</span>Aluguel</a></li>
+                            <li><a href="#"><span class="material-icons">star_outline</span>Fantasias</a></li>
+                            <li><a href="#"><span class="material-icons">weekend</span>Cama/Mesa/Banho</a></li>
+                        </ul>
+                    </li>
+                    <li><span class="material-icons">self_improvement</span>
+                        <a href="#" class="filter-item5">Saúde/Cuidados<span class="material-icons list5">keyboard_arrow_right</span></a>
+                        <ul class="sub-filter-item5">
+                            <li><a href="#"><span class="material-icons">local_pharmacy</span>Farmácias</a></li>
+                            <li><a href="#"><span class="material-icons">filter_vintage</span>Perfumarias</a></li>
+                            <li><a href="#"><span class="material-icons">content_cut</span>Corte/Cabelo</a></li>
+                            <li><a href="#"><span class="material-icons">fitness_center</span>Academias</a></li>
+                            <li><a href="#"><span class="material-icons">spa</span>Spa's</a></li>
+                            <li><a href="#"><span class="material-icons">medical_services</span>Consultórios</a></li>
+                        </ul>
+                    </li>
+                    <li><span class="material-icons">local_library</span>
+                        <a href="#" class="filter-item6">Cultura/Lazer<span class="material-icons list6">keyboard_arrow_right</span></a>
+                        <ul class="sub-filter-item6">
+                            <li><a href="#"><span class="material-icons">account_balance</span>Teatro</a></li>
+                            <li><a href="#"><span class="material-icons">movie_filter</span>Cinemas</a></li>
+                            <li><a href="#"><span class="material-icons">storefront</span>Exposições</a></li>
+                            <li><a href="#"><span class="material-icons">nature_people</span>Parques</a></li>
+                            <li><a href="#"><span class="material-icons">connect_without_contact</span>Clubes</a></li>
+                            <li><a href="#"><span class="material-icons">local_activity</span>Eventos</a></li>
+                        </ul>
+                    </li>
+                    <li><span class="material-icons">handyman</span>
+                        <a href="#" class="filter-item7">Utilidades<span class="material-icons list7">keyboard_arrow_right</span></a>
+                        <ul class="sub-filter-item7">
+                            <li><a href="#"><span class="material-icons">shopping_basket</span>Utensílios</a></li>
+                            <li><a href="#"><span class="material-icons">vpn_key</span>Chaveiros</a></li>
+                            <li><a href="#"><span class="material-icons">loop</span>Descartáveis</a></li>
+                            <li><a href="#"><span class="material-icons">description</span>Papelarias</a></li>
+                            <li><a href="#"><span class="material-icons">gesture</span>Costura</a></li>
+                            <li><a href="#"><span class="material-icons">build_circle</span>Ferragens</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div id="search-input">
+                <div class="search-option">
+                    <button class="local-btn"><span class="material-icons">gps_fixed</span></button>
+                    <button class="map-btn"><span class="material-icons">map</span></button>
+                    <button class="list-btn"><span class="material-icons pulse">list</span></button>
+                </div>
+                <div class="input-option">
+                    <input type="text" class="text-input" placeholder="  digite o endereço, palavra chave.....">
+                    <button><span class="material-icons">search</span></button>
+                </div>
+            </div>
+            <div id="profile-options">
+                <button class="home-btn"><span class="material-icons">home</span></button>
+                <button class="fav-btn"><span class="material-icons">star_rate</span></button>
+                <button class="notif-btn"><span class="material-icons">notifications</span></button>
+                <button class="settings-btn"><span class="material-icons">settings</span></button>
+            </div>
+        <script src="/main.js"></script> <!-- MEU SCRIPT -->
+        </div>
+        <!-- PAGINA DE NAVEGAÇÃO DEFAULT -->
+        <embed src="/main.html" type="html">
+        <div class="navigation">
+            <div class="left-sector">
+                <h5>M A P</h5>
+                <nav class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14628.280182723382!2d-46.5403904!3d-23.56592765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1604549176232!5m2!1spt-BR!2sbr" width="100%" height="420" frameborder="0" style="border:0;" aria-hidden="false" tabindex="0"></iframe>
+                </nav>
+                <h5>D E T A I L S</h5>
+                <nav class="acc-container">
+                    <ul>
+                        <li>
+                            <div class="acc-card">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14628.280182723382!2d-46.5403904!3d-23.56592765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1604549176232!5m2!1spt-BR!2sbr" width="200px" height="200px" frameborder="0" style="border:o;" aria-hidden="false" tabindex="0"></iframe>
+                                <img src="https://listanacional.com.br/uploads/clientes/padaria-sao-braz-18882-1.jpg" alt="acc-logo" width="160px" height="160px">
+                                <div>
+                                    <h2>Padaria São Brás</h2>
+                                    <p>
+                                        Horarios: 6h às 23h <br>
+                                        Local: Rua  Valença do Minho, 000 <br><br>
+                                        Breve descrição ou propaganda chamado para o cliente.
+                                        Breve descrição ou propaganda chamado para o cliente.
+                                        Breve descrição ou propaganda chamado para o cliente.
+                                    </p>
+                                </div>
+                                <div>
+                                    <span class="material-icons business">visibility</span>
+                                    <label for="">ver</label>
+                                    <span class="material-icons">location_on</span>
+                                    <label for="">5 km</label>
+                                    <span class="material-icons">thumb_up_alt</span>
+                                    <label for="">like</label>
+                                    <span class="material-icons">star_rate</span>
+                                    <label for="">fav</label>
+                                    <span class="material-icons">verified_user</span>
+                                    <label for="">verified</label>
+                                </div>
+                        </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="right-sector">
+                <h5>L I S T</h5>
+                <nav class="list-container">
+                    <ul>
+                        <li>
+                            <div class="list-item">
+                                <img src="https://pbs.twimg.com/media/D-QH4RkXsAc3Xxc.png" alt="acc-logo">
+                                <div>
+                                    <span class="material-icons business">share</span>
+                                    <label for="">share</label>
+                                    <span class="material-icons">location_on</span>
+                                    <label for="">5 km</label>
+                                    <span class="material-icons">verified_user</span>
+                                    <label for="">verified</label>
+                                </div>
+                                <div><h3>Mister Lanches</h3>
+                                    <p>Horários: 15h às 00h <br>
+                                    Local: Rua Hermes e Renato 000</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="list-item">
+                                <img src="https://fastly.4sqi.net/img/general/200x200/260859_0dcrIDdYx1ZaIiq5QmeKDPwfvQ35QS1Xs6IMob-h3Dg.jpg" alt="acc-logo">
+                                <div>
+                                    <span class="material-icons business">share</span>
+                                    <label for="">share</label>
+                                    <span class="material-icons">location_on</span>
+                                    <label for="">5 km</label>
+                                    <span class="material-icons">verified_user</span>
+                                    <label for="">verified</label>
+                                </div>
+                                <div><h3>Bar Sucessos</h3>
+                                    <p>Horários: 15h às 00h <br>
+                                    Local: Rua da Consolação 000</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="list-item">
+                                <img src="https://1.bp.blogspot.com/-SMCieuTy-Sc/U9XE4F9hmwI/AAAAAAAAAXg/rrGF6GExB-8/w1200-h630-p-k-no-nu/DSC07363.JPG" alt="acc-logo">
+                                <div>
+                                    <span class="material-icons business">share</span>
+                                    <label for="">share</label>
+                                    <span class="material-icons">location_on</span>
+                                    <label for="">5 km</label>
+                                    <span class="material-icons">verified_user</span>
+                                    <label for="">verified</label>
+                                </div>
+                                <div><h3>Laricão</h3>
+                                    <p>Horários: 15h às 00h <br>
+                                    Local: Rua da Consolação 000</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

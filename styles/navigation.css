@@ -1,0 +1,105 @@
+/* ESTILIZAÇÃO DO SETOR DE NAVEGAÇÃO */
+/* GERAL */
+.navigation {
+    display: flex;
+    color: white;
+}
+h5 {
+    padding: 5px 20px;
+    border-bottom: 2px solid white;
+}
+/* SETOR DIREITO */
+.right-sector {
+    display: center;
+    width: 35%;
+    height: 100%;
+    margin: 0px;
+    background-color: #555;
+}
+/* MAPA */
+.map-container {
+    margin: 20px;
+    margin-bottom: 0px;
+}
+/* LISTA LOCAL SELECIONADO ABAIXO DO MAPA */
+.acc-container {
+    width: 96%;
+    margin: 20px;
+}
+.acc-container ul{
+    list-style: none;
+    padding: 0px;
+}
+.acc-container .acc-card {
+    background-color: #444;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.acc-container .acc-card img {
+    margin: 10px;
+    margin-left: 20px;
+}
+.acc-container .acc-card div {
+    margin: 10px;
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+}
+.acc-container .acc-card div span {
+    font-size: 22px;
+    margin: 1px;
+    text-align: center;
+    cursor: pointer;
+}
+/* SETOR ESQUERDO */
+.left-sector {
+    display: center;
+    width: 65%;
+    height: 100%;
+    margin: 0px;
+    background-color: #555;
+    border-right: 2px solid white;
+}
+.list-container {
+    width: 100%;
+    height: 100%;
+    border-right: 2px;
+    background-color: #444;
+
+}
+/* LISTA LATERAL DE LOCAIS */
+.list-container ul {
+    padding: 0px;
+}
+.list-container li {
+    list-style: none;
+    border-bottom: 1px solid white;
+}
+.list-container li img {
+    width: 80px;
+    height: 80px;
+    margin: 16px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+.list-container li:hover {
+    background-color: #777;
+    transition: 0.3s;
+}
+.list-container .list-item {
+    display: flex;
+    align-items: center;
+    font-size: small;
+}
+.list-container .list-item div {
+    display: grid;
+    margin: 16px;
+}
+.list-container .list-item div span {
+    font-size: 18px;
+    margin: 2px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+}
