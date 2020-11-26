@@ -1,0 +1,44 @@
+
+.upper-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: whitesmoke;
+}
+.upper-container >img {
+    margin: 30px;
+    padding: 0px;
+    width: 160px;
+    border: 16px solid whitesmoke;
+    border-radius: 50%;
+}
+
+.landing-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+}
+
+.propaganda >img {
+     width: 400px;
+ }
+.propaganda {
+    display: block;
+}
+.sign-container {
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+}
+.sign-container button {
+    margin: 5px;
+    width: 240px;
+    height: 180px;
+    background-color: #444;
+    border: 0px;
+    color: whitesmoke;
+    font-size: 20px;
+}
