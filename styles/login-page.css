@@ -1,0 +1,36 @@
+.login-container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background-color: #444;
+    padding: 135px;
+}
+
+.login-container >img {
+    width: 50px;
+    margin: 5px;
+    position: relative;
+    left: 60px;
+}
+
+.login-container h6 {
+    color: whitesmoke;
+    margin: 5px;
+    font-weight: 400;
+}
+
+.login-container input {
+    margin-top: 5px;
+}
+
+.login-container button {
+    margin-top: 5px;
+    font-weight: 400;
+}
+
+.login-container a {
+    text-decoration: none;
+    font-size: 15px;
+    margin-top: 5px;
+    font-weight: 400;
+}
