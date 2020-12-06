@@ -7,25 +7,41 @@
 }
 
 .login-container >img {
-    width: 50px;
+    width: 100px;
     margin: 5px;
+    border-radius: 50%;
     position: relative;
-    left: 60px;
+    left: 90px;
 }
 
 .login-container h6 {
     color: whitesmoke;
     margin: 5px;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .login-container input {
     margin-top: 5px;
+    border: 0px;
+    border-radius: 5px;
+    width: 300px;
+    height: 40px;
+    background-color: gray;
+    color: whitesmoke;
 }
 
 .login-container button {
-    margin-top: 5px;
-    font-weight: 400;
+    margin-top: 15px;
+    border: 0px;
+    font-weight: 600;
+    height: 45px;
+    background-color: #555;
+    border-radius: 5px;
+}
+.login-container button:hover {
+    background-color: rgb(65, 163, 65);
+    box-shadow: 2px 2px 5px  whitesmoke;
+    color: whitesmoke;
 }
 
 .login-container a {
