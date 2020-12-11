@@ -236,3 +236,8 @@ label {
 #filters-menu ul .sub-filter-item7.expand {
     display: block;
 }
+
+.navigation {
+    width: 100vw;
+    height: 100vh;
+}
