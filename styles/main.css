@@ -147,6 +147,7 @@ label {
 #profile-options .settings-btn.clicked,
 #profile-options .home-btn.clicked {
     background-color: cornflowerblue;
+    transition: 0.2s;
 }
 /* ESTILIZAÇÃO DO MENU DE FILTROS SLIDER*/
 #filters-menu {
