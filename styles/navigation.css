@@ -46,8 +46,7 @@ h5 {
     justify-content: space-evenly;
 }
 .acc-container .acc-card img {
-    margin: 0px;
-    margin-left: 20px;
+    margin: 24px;
 }
 .acc-container .acc-card div {
     margin: 10px;
@@ -87,18 +86,16 @@ h5 {
 .list-container .list-item {
     display: flex;
     align-items: center;
-    font-size: small;
+    font-size: 16px;
 }
 .list-container .list-item div {
     display: center;
-    padding: 24px;
+    padding: 16px;
 }
 .list-container .list-item div span {
     font-size: 20px;
     margin: 0px;
-    padding: 15px 5px;
-
-
+    padding: 15px 2px;
     text-align: center;
     cursor: pointer;
 }
