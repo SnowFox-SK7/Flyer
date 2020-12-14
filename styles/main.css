@@ -1,13 +1,11 @@
 * {
     margin: 0;
-    padding: 0px;
+    padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    color: lightgray;
+    color: whitesmoke;
 }
 html,
 body {
-    width: 100vw;
-    height: 100vh;
     background-color: #555;
 }
 /* ANIMAÇÃO DE CLIQUE DO BOTÃO */
@@ -27,7 +25,7 @@ body {
 /* GIRO DA SETA DOS FILTROS */
 #filters-menu ul li a span.turn {
     transform: rotate(90deg);
-    color: black;
+    transition: 0.2s;
 }
 /* PARA EXPANDIR OS SUB-FILTROS */
 #filters-menu.expand {

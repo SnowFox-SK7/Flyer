@@ -1,9 +1,9 @@
 /* BARRA SUPERIOR DEFAULT */
 #default-upper-bar {
     width: 100%;
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    background-color: #224;
+    background-color: #222;
 }
 /* LOGOTIPO */
 #logo-container {
@@ -39,7 +39,7 @@
 .btn-show span:hover,
 .btn-close span:hover {
     color: cornflowerblue;
-    transition: 0.4s;
+    transition: 0.2s;
 }
 /* BARRA DE OPÇÕES DE BUSCA */
 #search-input {
@@ -67,10 +67,10 @@
 }
 #search-input .search-option button {
     cursor: pointer;
-    background-color: #555;
+    background-color: #222;
     color: white;
     border: 0;
-    border-radius: 25px;
+    border-radius: 50%;
     padding: 5px 10px;
     font-size: 28px;
     margin: 5px;
@@ -81,7 +81,7 @@
     width: 60%;
 }
 #search-input .input-option .text-input {
-    width: 500px;
+    width: 550px;
     border: 0;
     padding: 4px 10px;
     font-size: medium;
@@ -96,37 +96,44 @@
     color: white;
     font-size: 32px;
     border: 0px;
-    width: 70px;
+    width: 80px;
     border-bottom-right-radius: 16px;
     border-top-right-radius: 15px;
     background-color: #555;
+}
+#search-input .search-option button:hover,
+#search-input .input-option  button:hover,
+#search-input .input-option .text-input:hover,
+#profile-options button:hover {
+    background-color: #444;
+    transition: 0.3s;
 }
 /* BARRA DE OPÇÕES DE PERFIL */
 #profile-options {
     position: relative;
     display: flex;
     align-items: center;
-    width: 15%;
+    width: 19%;
 }
 #profile-options button {
     cursor: pointer;
-    background-color: #555;
+    background-color: #222;
     color: white;
     border: 0;
-    border-radius: 25px;
+    border-radius: 50%;
     padding: 5px 10px;
     font-size: 28px;
     margin: 10px;
 }
 /* ESTILIZAÇÃO DO MENU DE FILTROS SLIDER*/
 #filters-menu {
-    background-color:#224;
+    background-color: #222;
     width: 280px;
     height: 100vh;
     position: absolute;
     top: 0px;
     left: -280px;
-    transition: 0.4s;
+    transition: 0.2s;
 }
 .filters-title {
     display: flex;
@@ -139,7 +146,7 @@
 #filters-menu ul li {
     line-height: 50px;
     color: white;
-    background-color:#225;
+    background-color: #444;
     border-bottom: 1px solid whitesmoke;
 }
 #filters-menu ul li a {
@@ -160,7 +167,7 @@
     display: none;
 }
 #filters-menu ul ul li a {
-    background-color: #224;
+    background-color: #777;
     padding-left: 10px;
     font-size: 14px;
     display: block;
@@ -171,7 +178,7 @@
     position: absolute;
     right: 15px;
     padding: 10px;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 #filters-menu ul li a:hover {
     background-color: cornflowerblue;
