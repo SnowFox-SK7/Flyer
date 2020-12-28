@@ -128,12 +128,11 @@
 /* ESTILIZAÇÃO DO MENU DE FILTROS SLIDER*/
 #filters-menu {
     background-color: #222;
-    width: 280px;
+    width: 20%;
     height: 100vh;
     position: absolute;
     top: 0px;
     left: -280px;
-    transition: 0.2s;
 }
 .filters-title {
     display: flex;
@@ -178,13 +177,7 @@
     position: absolute;
     right: 15px;
     padding: 10px;
-    transition: 0.2s;
 }
 #filters-menu ul li a:hover {
     background-color: cornflowerblue;
-}
-
-.navigation {
-    width: 100vw;
-    height: 100vh;
 }

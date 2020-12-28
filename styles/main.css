@@ -13,19 +13,19 @@ body {
 #search-input .search-option .list-btn.clicked,
 #search-input .search-option .local-btn.clicked {
     background-color: cornflowerblue;
-    transition: 0.2s;
+    transition: 0.3s;
 }
 #profile-options .fav-btn.clicked,
 #profile-options .notif-btn.clicked,
 #profile-options .settings-btn.clicked,
 #profile-options .home-btn.clicked {
     background-color: cornflowerblue;
-    transition: 0.2s;
+    transition: 0.3s;
 }
 /* GIRO DA SETA DOS FILTROS */
 #filters-menu ul li a span.turn {
     transform: rotate(90deg);
-    transition: 0.2s;
+    transition: 0.3s;
 }
 /* PARA EXPANDIR OS SUB-FILTROS */
 #filters-menu.expand {
