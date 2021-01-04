@@ -1,13 +1,9 @@
 /* PARA OS BOTÕES DE OPÇÃO DE BUSCA MUDAREM AO CLICAR */
 $('.map-btn').click(function(){
     $('.map-btn').toggleClass('clicked');
-
-    $('.list-btn').removeClass('clicked');
 });
 $('.list-btn').click(function(){
     $('.list-btn').toggleClass('clicked');
-
-    $('.map-btn').removeClass('clicked');
 });
 $('.local-btn').click(function(){
     $('.local-btn').toggleClass('clicked');
