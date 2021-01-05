@@ -31,13 +31,25 @@ function btnConfigSelected(){
 }
 
 /* FUNÇÕES PARA OS FILTROS E SUB-FILTROS */
+
+/* AS VARIÁVEIS NÃO FUNCIONARAM NOS METODOS */
 let $filtersMenu = document.getElementById("filters-menu");
 let $filters = document.getElementsByClassName('filters');
 let $subFilters = document.getElementsByClassName('sub-filters');
 
 /* EXPANSÃO DOS SUBFILTROS */
 
-var index = 0;
+var index = document.querySelectorAll(".filters"); 
+
+index.forEach(function (filterSelect) {
+    filterSelect.addEventListener("click", subFiltersExpand);
+});
+
+function subFiltersExpand(event){
+    $subFilters[Array.from(index).indexOf(event.target)].style.display = "block";
+}
+
+/* var index = 0;
 
 $filters[index].addEventListener("click", subFilterExpand);
 
@@ -48,4 +60,7 @@ function subFilterExpand() {
     $filters[index].style.backgroundColor = "gray";
     $subFilters[index].style.backgroundColor = "lightgray";
     $subFilters[index].style.display = "block";
-}
+} */
+
+
+
