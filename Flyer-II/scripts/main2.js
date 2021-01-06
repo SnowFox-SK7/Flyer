@@ -46,7 +46,14 @@ index.forEach(function (filterSelect) {
 });
 
 function subFiltersExpand(event){
-    $subFilters[Array.from(index).indexOf(event.target)].style.display = "block";
+    for (i = 0; i < $filters.length; i++){
+        if($subFilters[Array.from(index).indexOf(event.target)].style.display == "none"){
+            $subFilters[Array.from(index).indexOf(event.target)].style.display = "block";
+        }
+        else {
+            $subFilters[i].style.display = "none";
+        }
+    }
 }
 
 /* var index = 0;
