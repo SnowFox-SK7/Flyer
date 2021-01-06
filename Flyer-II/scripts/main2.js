@@ -45,15 +45,14 @@ index.forEach(function (filterSelect) {
     filterSelect.addEventListener("click", subFiltersExpand);
 });
 
-function subFiltersExpand(event)
-{
-    for(j = 0; j < $filters.length; j++)
-    {
-        if($subFilters[Array.from(index).indexOf(event.target)].style.display == "none")
+function subFiltersExpand(event){
+    for (i = 0; i < $filters.length; i++){
+        if($subFilters[Array.from(index).indexOf(event.target)].style.display == "none"){
             $subFilters[Array.from(index).indexOf(event.target)].style.display = "block";
-        else
-            for (i = 0; i < $filters.length; i++)
-              $subFilters[i].style.display = "none";
+        }
+        else {
+            $subFilters[i].style.display = "none";
+        }
     }
 }
 
