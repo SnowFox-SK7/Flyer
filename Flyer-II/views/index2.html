@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Flyer </title>
     <!-- ESTILOS -->
+    <link rel="shortcut icon" href="#">
     <link rel="stylesheet" href="/Flyer-II/styles/main2.css">
     <!-- GOOGLE ICONS -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -17,17 +18,16 @@
 
     <div id="header">
         <div class="logo-container">
-            <button id="btn-close" style="display: none;" onclick="menuUnexpand()">
+            <button id="btn-close"  style="display: none;" >
                 <span class="material-icons">arrow_back</span></button>
-            <button id="btn-show" onclick="menuExpand()">
+            <button id="btn-show">
                 <span class="material-icons">add</span>
             </button>
             <img class="logo" src="/images/flyer-icon.png" alt="logo">
         </div>
         <div>
-            <button id="btn-map" onclick="btnMapSelected()">
-                <span class="material-icons">map</span></button>
-            <button id="btn-list" onclick="btnListSelected()"><span class="material-icons">view_list</span></button>
+            <button id="btn-map"><span class="material-icons">map</span></button>
+            <button id="btn-list"><span class="material-icons">view_list</span></button>
         </div>
         <div class="search-input">
             <button id="btn-gps"><span class="material-icons">gps_fixed</span></button>
@@ -35,10 +35,10 @@
             <button id="btn-search"><span class="material-icons">search</span></button>
         </div>
         <div class="header-options">
-            <button id="btn-home" onclick="btnHomeSelected()"><span class="material-icons">home</span></button>
-            <button id="btn-fav" onclick="btnFavSelected()"><span class="material-icons">star_rate</span></button>
-            <button id="btn-notif" onclick="btnNotifSelected()"><span class="material-icons">campaign</span></button>
-            <button id="btn-config" onclick="btnConfigSelected()"><span class="material-icons">settings</span></button>
+            <button id="btn-home"><span class="material-icons">home</span></button>
+            <button id="btn-fav"><span class="material-icons">star_rate</span></button>
+            <button id="btn-promo"><span class="material-icons">campaign</span></button>
+            <button id="btn-config"><span class="material-icons">settings</span></button>
         </div>
         
     </div>

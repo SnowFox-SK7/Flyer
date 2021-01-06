@@ -1,38 +1,89 @@
 /* FUNÇÕES PARA OS BOTÕES DO HEADER */
-function menuExpand(){
-    document.getElementById('filters-menu').style.display = 'block';
-    document.getElementById('btn-show').style.display = "none";
-    document.getElementById('btn-close').style.display = "block";
-}
-function menuUnexpand(){
-    document.getElementById('filters-menu').style.display = 'none';
-    document.getElementById('btn-show').style.display= "block";
-    document.getElementById('btn-close').style.display = "none";
+let $btnShow = document.getElementById('btn-show');
+let $btnClose = document.getElementById('btn-close');
+let $btnMap = document.getElementById('btn-map');
+let $btnList = document.getElementById('btn-list');
+let $btnHome = document.getElementById('btn-home');
+let $btnFav = document.getElementById('btn-fav');
+let $btnPromo = document.getElementById('btn-promo');
+let $btnConfig = document.getElementById('btn-config');
+
+$btnShow.onclick = menuExpand;
+$btnClose.onclick = menuExpand;
+$btnMap.onclick = btnMapSelected;
+$btnHome.onclick = btnHomeSelected;
+$btnList.onclick = btnListSelected;
+$btnFav.onclick = btnFavSelected;
+$btnPromo.onclick = btnPromoSelected;
+$btnConfig.onclick = btnConfigSelected;
+
+function menuExpand() {
+    if ($filtersMenu.style.display == "none"){
+        $filtersMenu.style.display = 'block';
+        $btnShow.style.display = "none";
+        $btnClose.style.display = "block";
+    }
+    else {
+        $filtersMenu.style.display = "none";
+        $btnShow.style.display = "block";
+        $btnClose.style.display = "none";
+    }
 }
 function btnMapSelected(){
-    document.getElementById('btn-map').style.backgroundColor = "steelblue";
-    document.getElementById('main-map').style.display = "block";
+    if (document.getElementById('main-map').style.display == "none"){
+        $btnMap.style.backgroundColor = "steelblue";
+        document.getElementById('main-map').style.display = "block";
+    }
+    else {
+        document.getElementById('main-map').style.display = "none";
+        document.getElementById('btn-map').style.backgroundColor = "silver";
+    }
 }
 function btnListSelected(){
-    document.getElementById('btn-list').style.backgroundColor = "steelblue";
-    document.getElementById('list').style.display = "block";
+    if (document.getElementById('list').style.display == "none"){
+        document.getElementById('btn-list').style.backgroundColor = "steelblue";
+        document.getElementById('list').style.display = "block";
+    }
+    else {
+        document.getElementById('list').style.display = "none"
+        document.getElementById('btn-list').style.backgroundColor = "silver";
+    }
 }
 function btnHomeSelected(){
-    document.getElementById('btn-home').style.backgroundColor = "steelblue";
+    if ($btnHome.style.backgroundColor == "silver"){
+        $btnHome.style.backgroundColor = "steelblue";
+    }
+    else {
+        $btnHome.style.backgroundColor = "silver";
+    }
 }
 function btnFavSelected(){
-    document.getElementById('btn-fav').style.backgroundColor = "steelblue";
+    if ($btnFav.style.backgroundColor == "silver"){
+        $btnFav.style.backgroundColor = "steelblue";
+    }
+    else {
+        $btnFav.style.backgroundColor = "silver";
+    }
 }
-function btnNotifSelected(){
-    document.getElementById('btn-notif').style.backgroundColor = "steelblue";
+function btnPromoSelected(){
+    if ($btnPromo.style.backgroundColor == "silver"){
+        $btnPromo.style.backgroundColor = "steelblue";
+    }
+    else {
+        $btnPromo.style.backgroundColor = "silver";
+    }
 }
 function btnConfigSelected(){
-    document.getElementById('btn-config').style.backgroundColor = "steelblue";
+    if ($btnConfig.style.backgroundColor == "silver"){
+        $btnConfig.style.backgroundColor = "steelblue";
+    }
+    else {
+        $btnConfig.style.backgroundColor = "silver";
+    }
 }
 
 /* FUNÇÕES PARA OS FILTROS E SUB-FILTROS */
 
-/* AS VARIÁVEIS NÃO FUNCIONARAM NOS METODOS */
 let $filtersMenu = document.getElementById("filters-menu");
 let $filters = document.getElementsByClassName('filters');
 let $subFilters = document.getElementsByClassName('sub-filters');
@@ -40,27 +91,28 @@ let $subFilters = document.getElementsByClassName('sub-filters');
 /* EXPANSÃO DOS SUBFILTROS */
 
 var index = document.querySelectorAll(".filters"); 
+var subIndex = document.querySelectorAll(".sub-filters li");
 
 index.forEach(function (filterSelect) {
     filterSelect.addEventListener("click", subFiltersExpand);
 });
 
 function subFiltersExpand(event){
-    $subFilters[Array.from(index).indexOf(event.target)].style.display = "block";
+    for ( j = 0; j < $filters.length; j++ ){
+        if($subFilters[Array.from(index).indexOf(event.target)].style.display == "none"){
+            $subFilters[Array.from(index).indexOf(event.target)].style.display = "block";
+        } 
+        else {
+            for ( i = 0; i < $filters.length; i++ ){
+            $subFilters[i].style.display = "none";
+            }
+        }
+    }
 }
 
-/* var index = 0;
-
-$filters[index].addEventListener("click", subFilterExpand);
-
-function filterSelect() {
-    subFilterExpand();
-} 
-function subFilterExpand() {
-    $filters[index].style.backgroundColor = "gray";
-    $subFilters[index].style.backgroundColor = "lightgray";
-    $subFilters[index].style.display = "block";
-} */
-
-
-
+subIndex.forEach(function (subFilterSelect) {
+    subFilterSelect.addEventListener("click", subFilterItem);
+});
+function subFilterItem(event) {
+    console.log (Array.from(subIndex).indexOf(event.target));
+}

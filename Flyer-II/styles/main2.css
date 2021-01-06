@@ -14,6 +14,7 @@ button {
     border-radius: 50%;
     margin: 5px;
     cursor: pointer;
+    background-color: silver;
 }
 
 ul {
@@ -29,12 +30,10 @@ img {
     border-radius: 50%;
 }
 
-
 .logo-container {
-    width: 200px;
+    width: 180px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
 #header {
@@ -109,18 +108,18 @@ img {
 
 #main-map {
     width: 800px;
-    display: none;
+    display: block;
     background-color: silver;
 }
 #details {
     width: 800px;
-    display: center;
+    display: block;
     justify-content: space-evenly;
     background-color: silver;
 }
 #list {
     width: 520px;
-    display: none;
+    display: block;
     justify-content: space-evenly;
     background-color: silver;
 }
