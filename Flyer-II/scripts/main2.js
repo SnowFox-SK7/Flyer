@@ -7,80 +7,99 @@ let $btnHome = document.getElementById('btn-home');
 let $btnFav = document.getElementById('btn-fav');
 let $btnPromo = document.getElementById('btn-promo');
 let $btnConfig = document.getElementById('btn-config');
-
-$btnShow.onclick = menuExpand;
-$btnClose.onclick = menuExpand;
-$btnMap.onclick = btnMapSelected;
-$btnHome.onclick = btnHomeSelected;
-$btnList.onclick = btnListSelected;
-$btnFav.onclick = btnFavSelected;
-$btnPromo.onclick = btnPromoSelected;
-$btnConfig.onclick = btnConfigSelected;
+let $btnGps = document.getElementById('btn-gps');
 
 function menuExpand() {
-    if ($filtersMenu.style.display == "none"){
-        $filtersMenu.style.display = 'block';
-        $btnShow.style.display = "none";
-        $btnClose.style.display = "block";
-    }
-    else {
+    if ($filtersMenu.style.display == "block"){
         $filtersMenu.style.display = "none";
         $btnShow.style.display = "block";
         $btnClose.style.display = "none";
     }
-}
-function btnMapSelected(){
-    if (document.getElementById('main-map').style.display == "none"){
-        $btnMap.style.backgroundColor = "steelblue";
-        document.getElementById('main-map').style.display = "block";
-    }
     else {
+        $filtersMenu.style.display = "block";
+        $btnShow.style.display = "none";
+        $btnClose.style.display = "block";
+        
+    }
+}
+$btnShow.onclick = menuExpand;
+$btnClose.onclick = menuExpand;
+
+function btnMapSelected(){
+    if (document.getElementById('main-map').style.display == "block"){
         document.getElementById('main-map').style.display = "none";
         document.getElementById('btn-map').style.backgroundColor = "silver";
     }
-}
-function btnListSelected(){
-    if (document.getElementById('list').style.display == "none"){
-        document.getElementById('btn-list').style.backgroundColor = "steelblue";
-        document.getElementById('list').style.display = "block";
-    }
     else {
+        $btnMap.style.backgroundColor = "steelblue";
+        document.getElementById('main-map').style.display = "block";        
+    }
+}
+$btnMap.onclick = btnMapSelected;
+
+function btnListSelected(){
+    if (document.getElementById('list').style.display == "block"){
         document.getElementById('list').style.display = "none"
         document.getElementById('btn-list').style.backgroundColor = "silver";
     }
+    else {
+        document.getElementById('btn-list').style.backgroundColor = "steelblue";
+        document.getElementById('list').style.display = "block";
+    }
 }
-function btnHomeSelected(){
-    if ($btnHome.style.backgroundColor == "silver"){
-        $btnHome.style.backgroundColor = "steelblue";
+$btnList.onclick = btnListSelected;
+
+function btnGpsSelected(){
+    if ($btnGps.style.backgroundColor == "steelblue"){
+        $btnGps.style.backgroundColor = "silver";
     }
     else {
+        $btnGps.style.backgroundColor = "steelblue";
+    }
+}
+$btnGps.onclick = btnGpsSelected;
+
+
+function btnHomeSelected(){
+    if ($btnHome.style.backgroundColor == "steelblue"){
         $btnHome.style.backgroundColor = "silver";
     }
-}
-function btnFavSelected(){
-    if ($btnFav.style.backgroundColor == "silver"){
-        $btnFav.style.backgroundColor = "steelblue";
-    }
     else {
+        $btnHome.style.backgroundColor = "steelblue";
+    }
+}
+$btnHome.onclick = btnHomeSelected;
+
+function btnFavSelected(){
+    if ($btnFav.style.backgroundColor == "steelblue"){
         $btnFav.style.backgroundColor = "silver";
     }
-}
-function btnPromoSelected(){
-    if ($btnPromo.style.backgroundColor == "silver"){
-        $btnPromo.style.backgroundColor = "steelblue";
-    }
     else {
+        $btnFav.style.backgroundColor = "steelblue";
+        
+    }
+}
+$btnFav.onclick = btnFavSelected;
+
+function btnPromoSelected(){
+    if ($btnPromo.style.backgroundColor == "steelblue"){
         $btnPromo.style.backgroundColor = "silver";
     }
-}
-function btnConfigSelected(){
-    if ($btnConfig.style.backgroundColor == "silver"){
-        $btnConfig.style.backgroundColor = "steelblue";
-    }
     else {
+        $btnPromo.style.backgroundColor = "steelblue";
+    }
+}
+$btnPromo.onclick = btnPromoSelected;
+
+function btnConfigSelected(){
+    if ($btnConfig.style.backgroundColor == "steelblue"){
         $btnConfig.style.backgroundColor = "silver";
     }
+    else {
+        $btnConfig.style.backgroundColor = "steelblue";
+    }
 }
+$btnConfig.addEventListener("click", btnConfigSelected);
 
 /* FUNÇÕES PARA OS FILTROS E SUB-FILTROS */
 
@@ -99,13 +118,13 @@ index.forEach(function (filterSelect) {
 
 function subFiltersExpand(event){
     for ( j = 0; j < $filters.length; j++ ){
-        if($subFilters[Array.from(index).indexOf(event.target)].style.display == "none"){
-            $subFilters[Array.from(index).indexOf(event.target)].style.display = "block";
+        if($subFilters[Array.from(index).indexOf(event.target)].style.display == "block"){
+            for ( i = 0; i < $filters.length; i++ ){
+                $subFilters[i].style.display = "none";
+            }            
         } 
         else {
-            for ( i = 0; i < $filters.length; i++ ){
-            $subFilters[i].style.display = "none";
-            }
+            $subFilters[Array.from(index).indexOf(event.target)].style.display = "block";            
         }
     }
 }
