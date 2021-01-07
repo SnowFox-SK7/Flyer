@@ -1,3 +1,2 @@
-# Flyer Featured00
+# Flyer
 Web-aplication for marketing and propaganda of small business.
-Editable version 
