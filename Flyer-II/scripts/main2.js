@@ -87,6 +87,8 @@ function btnPromoSelected(){
     }
     else {
         $btnPromo.style.backgroundColor = "steelblue";
+        document.getElementById('list').innerHTML = call;
+        var call = new XMLDocument("https://127.0.0.1:5500/views/profile-acc.html");
     }
 }
 $btnPromo.onclick = btnPromoSelected;
@@ -97,6 +99,7 @@ function btnConfigSelected(){
     }
     else {
         $btnConfig.style.backgroundColor = "steelblue";
+        document.getElementById('list').innerHTML = "CONFIG";
     }
 }
 $btnConfig.addEventListener("click", btnConfigSelected);
