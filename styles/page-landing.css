@@ -2,7 +2,6 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    color: whitesmoke;
     border-top: 1px solid whitesmoke;
 }
 .upper-container >img {

@@ -1,183 +1,129 @@
-/* BARRA SUPERIOR DEFAULT */
-#default-upper-bar {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    background-color: #222;
-}
-/* LOGOTIPO */
-#logo-container {
-    display: flex;
-    position: relative;
-    width: 20%;
-}
-#logo-container img,
-.filters-title img {
-    position: relative;
-    display: block;
-    margin: 5px;
-    width: 50px;
-    left: 60px;
-    border: 2px solid white;
-    border-radius: 12px;
-}
-/* ACIONA MENU DE FILTROS */
-.btn-show,
-.btn-close {
-    position: relative;
-    top: 10px;
-    left: 10px;
-    height: 50px;
-}
-.btn-show span,
-.btn-close span {
-    color: white;
-    position: relative;
-    cursor: pointer;
-    font-size: 45px;
-}
-.btn-show span:hover,
-.btn-close span:hover {
-    color: cornflowerblue;
-    transition: 0.2s;
-}
-/* BARRA DE OPÇÕES DE BUSCA */
-#search-input {
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: 60%;
-}
-#search-input .search-option,
-#search-input .input-option,
-#profile-options {
-    position: relative;
-    text-decoration: none;
-}
-#search-input .search-option button:hover,
-#search-input .input-option  button:hover,
-#search-input .input-option .text-input:hover,
-#profile-options button:hover {
-    background-color: #444;
-    transition: 0.3s;
-}
-#search-input .search-option {
-    position: relative;
-    width: 25%;
-}
-#search-input .search-option button {
-    cursor: pointer;
-    background-color: #222;
-    color: white;
-    border: 0;
-    border-radius: 50%;
-    padding: 5px 10px;
-    font-size: 28px;
-    margin: 5px;
-}
-#search-input .input-option {
-    display: flex;
-    position: relative;
-    width: 60%;
-}
-#search-input .input-option .text-input {
-    width: 550px;
-    border: 0;
-    padding: 4px 10px;
-    font-size: medium;
-    font-weight: 500;
-    border-bottom-left-radius: 18px;
-    border-top-left-radius: 18px;
-    color: whitesmoke;
-    background-color: #555;
-}
-#search-input .input-option button {
-    cursor: pointer;
-    color: white;
-    font-size: 32px;
+* {
     border: 0px;
-    width: 80px;
-    border-bottom-right-radius: 16px;
-    border-top-right-radius: 15px;
-    background-color: #555;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+
 }
-#search-input .search-option button:hover,
-#search-input .input-option  button:hover,
-#search-input .input-option .text-input:hover,
-#profile-options button:hover {
-    background-color: #444;
-    transition: 0.3s;
+html,
+body {
+    width: 100%;
+    height: 100%;
 }
-/* BARRA DE OPÇÕES DE PERFIL */
-#profile-options {
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: 19%;
-}
-#profile-options button {
-    cursor: pointer;
-    background-color: #222;
-    color: white;
-    border: 0;
+
+button {
+    width: 48px;
+    height: 45px;
     border-radius: 50%;
-    padding: 5px 10px;
-    font-size: 28px;
-    margin: 10px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: silver;
 }
-/* ESTILIZAÇÃO DO MENU DE FILTROS SLIDER*/
-#filters-menu {
-    background-color: #222;
-    width: 20%;
-    height: 100vh;
-    position: absolute;
-    top: 0px;
-    left: -280px;
-}
-.filters-title {
-    display: flex;
-}
-#filters-menu ul {
+
+ul {
     list-style: none;
-    padding: 0px;
-    font-weight: bold;
+    padding-left: 5px;
+    padding-right: 5px;
 }
-#filters-menu ul li {
-    line-height: 50px;
-    color: white;
-    background-color: #444;
-    border-bottom: 1px solid whitesmoke;
+
+img {
+    width: 54px;
+    height: 54px;
+    border: 3px solid white;
+    border-radius: 50%;
 }
-#filters-menu ul li a {
-    color: whitesmoke;
-    text-decoration: none;
-    font-size: 16px;
-    padding-left: 50px;
-    display: block;
+
+.logo-container {
+    width: 180px;
+    display: flex;
     align-items: center;
 }
-#filters-menu ul li span {
-    font-size: 24px;
+
+#header {
+    width: 100%;
+    height: 60px;
     position: absolute;
-    padding: 10px;
-    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: silver;
 }
-#filters-menu ul ul {
+
+.search-input {
+    width: 600px;
+    display: flex;
+    align-items: center;
+}
+
+.search-input .text-input {
+    width: 500px;
+    height: 38px;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+.header-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#filters-menu {
+    position: absolute;
+    display: none;
+    top: 60px;
+    width: 240px;
+    height: 100%;
+    border-top: 3px solid silver;
+    background-color: silver;
+}
+
+#filters-menu ul li .filters {
+    line-height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid;
+}
+
+#filters-menu ul .sub-filters {
     display: none;
 }
-#filters-menu ul ul li a {
-    background-color: #777;
-    padding-left: 10px;
-    font-size: 14px;
+
+#filters-menu ul ul li{
+    line-height: 34px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid;
+}
+
+.navigation {
+    width: 100%;
+    height: 100%;
+    padding-top: 70px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: lightgray;
+}
+
+#main-map {
+    width: 800px;
+    display: none;
+    background-color: silver;
+}
+#details {
+    width: 800px;
+    height: 100%;
     display: block;
+    justify-content: space-evenly;
+    background-color: silver;
 }
-/* GIRO DA SETA DOS FILTROS */
-#filters-menu ul li a span {
-    font-size: 24px;
-    position: absolute;
-    right: 15px;
-    padding: 10px;
-}
-#filters-menu ul li a:hover {
-    background-color: cornflowerblue;
+#list {
+    width: 520px;
+    height: 100%;
+    display: none;
+    justify-content: space-evenly;
+    background-color: silver;
 }
