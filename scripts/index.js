@@ -14,8 +14,8 @@ let $btnAll = document.querySelectorAll('button');
 $btnAll.forEach(function ($btn) {
     $btn.addEventListener("click", caller);
     function caller() {
-        for (var l = 0; l < $btnAll.length; l++) {
-            if (Array.from($btnAll).indexOf($btn) > 5 ) {
+        for (var l = 5; l < $btnAll.length; l++) {
+            if ( Array.from($btnAll).indexOf($btn) > 5 ) {
                 $btnAll[l].style.backgroundColor = "silver";
                 if($btnAll[Array.from($btnAll).indexOf($btn)].style.backgroundColor == "silver"){
                     $btnAll[Array.from($btnAll).indexOf($btn)].style.backgroundColor = "steelblue";
