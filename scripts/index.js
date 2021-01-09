@@ -8,6 +8,22 @@ let $btnFav = document.getElementById('btn-fav');
 let $btnPromo = document.getElementById('btn-promo');
 let $btnConfig = document.getElementById('btn-config');
 let $btnGps = document.getElementById('btn-gps');
+let $btnSearch = document.getElementById('btn-search');
+let $btnAll = document.querySelectorAll('button');
+
+$btnAll.forEach(function ($btn) {
+    $btn.addEventListener("click", caller);
+    function caller() {
+        for (var l = 0; l < $btnAll.length; l++) {
+            if (Array.from($btnAll).indexOf($btn) > 5 ) {
+                $btnAll[l].style.backgroundColor = "silver";
+                if($btnAll[Array.from($btnAll).indexOf($btn)].style.backgroundColor == "silver"){
+                    $btnAll[Array.from($btnAll).indexOf($btn)].style.backgroundColor = "steelblue";
+                }
+            }
+        }
+    }
+});
 
 function menuExpand() {
     if ($filtersMenu.style.display == "block"){
@@ -48,57 +64,23 @@ function btnListSelected(){
 }
 $btnList.onclick = btnListSelected;
 
-function btnGpsSelected(){
-    if ($btnGps.style.backgroundColor == "steelblue"){
-        $btnGps.style.backgroundColor = "silver";
-    }
-    else {
-        $btnGps.style.backgroundColor = "steelblue";
-    }
-}
-$btnGps.onclick = btnGpsSelected;
-
 function btnHomeSelected(){
-    if ($btnHome.style.backgroundColor == "steelblue"){
-        $btnHome.style.backgroundColor = "silver";
-    }
-    else {
-        $btnHome.style.backgroundColor = "steelblue";
-        document.getElementById('list').innerHTML = "HOME";
-    }
+    document.getElementById('list').innerHTML = "HOME";
 }
 $btnHome.onclick = btnHomeSelected;
 
 function btnFavSelected(){
-    if ($btnFav.style.backgroundColor == "steelblue"){
-        $btnFav.style.backgroundColor = "silver";
-    }
-    else {
-        $btnFav.style.backgroundColor = "steelblue";
-        document.getElementById('list').innerHTML = "FAVORITOS";
-    }
+    document.getElementById('list').innerHTML = "FAVORITOS";
 }
 $btnFav.onclick = btnFavSelected;
 
 function btnPromoSelected(){
-    if ($btnPromo.style.backgroundColor == "steelblue"){
-        $btnPromo.style.backgroundColor = "silver";
-    }
-    else {
-        $btnPromo.style.backgroundColor = "steelblue";
-        document.getElementById('list').innerHTML = "PROMO";
-    }
+    document.getElementById('list').innerHTML = "PROMO";
 }
 $btnPromo.onclick = btnPromoSelected;
 
 function btnConfigSelected(){
-    if ($btnConfig.style.backgroundColor == "steelblue"){
-        $btnConfig.style.backgroundColor = "silver";
-    }
-    else {
-        $btnConfig.style.backgroundColor = "steelblue";
-        document.getElementById('list').innerHTML = "CONFIG";
-    }
+    document.getElementById('list').innerHTML = "CONFIG";
 }
 $btnConfig.addEventListener("click", btnConfigSelected);
 
