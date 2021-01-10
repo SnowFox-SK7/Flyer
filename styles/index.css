@@ -3,10 +3,11 @@
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
-html,
-body {
-    width: 100%;
-    height: 100%;
+
+#html,
+#body {
+    width: 100vw;
+    height: 100vh;
 }
 
 button {
@@ -14,8 +15,9 @@ button {
     height: 3vw;
     margin: 1vw;
     cursor: pointer;
-    background-color: silver;
+    background-color: transparent;
     border-radius: 50%;
+    color: silver;
 }
 
 ul {
@@ -39,12 +41,12 @@ img {
 
 #header {
     width: 100%;
-    height: 10vh;
+    min-height: 10vh;
     position: absolute;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background-color: silver;
+    background-color: #445;
 }
 
 .search-input {
@@ -53,11 +55,31 @@ img {
     align-items: center;
 }
 
-.search-input .text-input {
-    width: 50vw;
-    height: 7vh;
-    border-radius: 10px;
+.search-input #text-input {
+    width: 40vw;
+    min-height: 5.1vh;
     padding-left: 10px;
+    font-size: 2vh;
+    color: whitesmoke;
+    background-color: #556;
+}
+.search-input #btn-search {
+    border-radius: 0px;
+    margin: 0px;
+    width: 4vw;
+    min-height: 3vh;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #556;
+}
+.search-input #btn-gps {
+    border-radius: 0px;
+    margin: 0px;
+    width: 4vw;
+    min-height: 3vh;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: #556;
 }
 
 .header-options {
@@ -69,11 +91,12 @@ img {
 #filters-menu {
     position: absolute;
     display: none;
-    top: 60px;
-    width: 18vw;
-    height: 100%;
-    border-top: 3px solid silver;
-    background-color: silver;
+    top: 10vh;
+    width: 20vw;
+    height: 100vh;
+    border-top: 2px solid silver;
+    color: silver;
+    background-color: #445;
 }
 
 #filters-menu ul li .filters {
@@ -82,7 +105,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 3px solid;
+    border-bottom: 2px solid;
 }
 
 #filters-menu ul .sub-filters {
@@ -96,4 +119,10 @@ img {
     align-items: center;
     justify-content: space-between;
     border-bottom: 2px solid;
+}
+
+.filters:hover,
+.sub-filters li:hover {
+    color: whitesmoke;
+    font-weight: bold;
 }

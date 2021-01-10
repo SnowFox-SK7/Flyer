@@ -14,11 +14,10 @@ let $btnAll = document.querySelectorAll('button');
 $btnAll.forEach(function ($btn) {
     $btn.addEventListener("click", caller);
     function caller() {
-        for (var l = 5; l < $btnAll.length; l++) {
-            if ( Array.from($btnAll).indexOf($btn) > 5 ) {
-                $btnAll[l].style.backgroundColor = "silver";
-                if($btnAll[Array.from($btnAll).indexOf($btn)].style.backgroundColor == "silver"){
-                    $btnAll[Array.from($btnAll).indexOf($btn)].style.backgroundColor = "steelblue";
+        for (var i_btn = 6; i_btn < $btnAll.length; i_btn++) {
+            if (Array.from($btnAll).indexOf($btn) > 5) {
+                if ($btnAll[i_btn].style.color = "silver") {
+                    $btnAll[Array.from($btnAll).indexOf($btn)].style.color = "cornflowerblue";
                 }
             }
         }
@@ -43,10 +42,10 @@ $btnClose.onclick = menuExpand;
 function btnMapSelected(){
     if (document.getElementById('main-map').style.display == "block"){
         document.getElementById('main-map').style.display = "none";
-        document.getElementById('btn-map').style.backgroundColor = "silver";
+        $btnMap.style.color = "silver";
     }
     else {
-        $btnMap.style.backgroundColor = "steelblue";
+        $btnMap.style.color = "cornflowerblue";
         document.getElementById('main-map').style.display = "block";     
     }
 }
@@ -55,32 +54,54 @@ $btnMap.onclick = btnMapSelected;
 function btnListSelected(){
     if (document.getElementById('list').style.display == "block"){
         document.getElementById('list').style.display = "none"
-        document.getElementById('btn-list').style.backgroundColor = "silver";
+        $btnList.style.color = "silver";
     }
     else {
-        document.getElementById('btn-list').style.backgroundColor = "steelblue";
+        $btnList.style.color = "cornflowerblue";
         document.getElementById('list').style.display = "block";
     }
 }
 $btnList.onclick = btnListSelected;
 
+function btnGpsSelected(){
+    if ($btnGps.style.color == "cornflowerblue"){
+        $btnGps.style.color = "silver";
+        document.getElementById('details').innerHTML = "GPS DESABILITADO";
+    }
+    else {
+        $btnGps.style.color = "cornflowerblue";
+        $btnGps.style.backgroundColor = "#668"
+        document.getElementById('details').innerHTML = "GPS HABILITADO";
+    }
+    
+}
+$btnGps.onclick = btnGpsSelected;
+
+function btnSearchSelected(){
+    $btnSearch.style.color = "cornflowerblue";
+    $btnSearch.style.backgroundColor = "#668"
+    document.getElementById('details').innerHTML = "SEARCH";
+
+}
+$btnSearch.onclick = btnSearchSelected;
+
 function btnHomeSelected(){
-    document.getElementById('list').innerHTML = "HOME";
+    document.getElementById('details').innerHTML = "HOME";
 }
 $btnHome.onclick = btnHomeSelected;
 
 function btnFavSelected(){
-    document.getElementById('list').innerHTML = "FAVORITOS";
+    document.getElementById('details').innerHTML = "FAVORITOS";
 }
 $btnFav.onclick = btnFavSelected;
 
 function btnPromoSelected(){
-    document.getElementById('list').innerHTML = "PROMO";
+    document.getElementById('details').innerHTML = "PROMO";
 }
 $btnPromo.onclick = btnPromoSelected;
 
 function btnConfigSelected(){
-    document.getElementById('list').innerHTML = "CONFIG";
+    document.getElementById('details').innerHTML = "CONFIG";
 }
 $btnConfig.addEventListener("click", btnConfigSelected);
 
@@ -89,9 +110,6 @@ $btnConfig.addEventListener("click", btnConfigSelected);
 let $filtersMenu = document.getElementById("filters-menu");
 let $filters = document.getElementsByClassName('filters');
 let $subFilters = document.getElementsByClassName('sub-filters');
-
-/* EXPANSÃO DOS SUBFILTROS */
-
 var index = document.querySelectorAll(".filters"); 
 var subIndex = document.querySelectorAll(".sub-filters li");
 
