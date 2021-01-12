@@ -57,15 +57,15 @@ img {
 
 .search-input #text-input {
     width: 40vw;
-    height: 41px;
+    min-height: 6.6vh;
     padding-left: 10px;
     font-size: 16px;
     color: whitesmoke;
     background-color: #556;
 }
 .search-input #btn-search {
-    border-radius: 0px;
-    margin: 0px;
+    border-radius: 0;
+    margin: 0;
     width: 4vw;
     min-height: 3vh;
     border-top-right-radius: 20px;
@@ -125,4 +125,8 @@ img {
 .sub-filters li:hover {
     color: whitesmoke;
     font-weight: bold;
+}
+
+.material-icons.md{
+    font-size: 1.8vw;
 }
