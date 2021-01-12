@@ -74,8 +74,7 @@ function btnGpsSelected(){
         $btnGps.style.backgroundColor = "#668"
         document.getElementById('details').innerHTML = "GPS HABILITADO";
     }
-    
-}
+ }
 $btnGps.onclick = btnGpsSelected;
 
 function btnSearchSelected(){
