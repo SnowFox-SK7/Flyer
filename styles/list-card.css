@@ -12,8 +12,9 @@ html {
 }
 #profile-info {
     display: flex;
+    font-size: 14px;
+    padding: 10px;
     background-color: #556;
-    border: 2px solid white;
 }
 #profile-info img {
     width: 20vw;

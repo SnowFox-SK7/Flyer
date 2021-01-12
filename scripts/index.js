@@ -66,6 +66,7 @@ $btnList.onclick = btnListSelected;
 function btnGpsSelected(){
     if ($btnGps.style.color == "cornflowerblue"){
         $btnGps.style.color = "silver";
+        $btnGps.style.backgroundColor = "#556"
         document.getElementById('details').innerHTML = "GPS DESABILITADO";
     }
     else {

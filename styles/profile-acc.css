@@ -6,8 +6,8 @@
 }
 body,
 html {
-    width: 780px;
-    height: 100vh;
+    width: 800px;
+    height: 100%;
     background-color: #666;
 }
 #profile-info {
