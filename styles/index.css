@@ -57,9 +57,9 @@ img {
 
 .search-input #text-input {
     width: 40vw;
-    height: 42px;
+    height: 41px;
     padding-left: 10px;
-    font-size: 2vh;
+    font-size: 16px;
     color: whitesmoke;
     background-color: #556;
 }
